@@ -1,15 +1,34 @@
 ﻿from random import randrange
 import pyperclip
 import ConfigParser
+import logging
+
+logging.basicConfig(format = u'%(filename)s[LINE:%(lineno)d]# %(levelname)-8s [%(asctime)s]  %(message)s', level = logging.ERROR, filename = u'erroe.log')
+logging.basicConfig(format = u'%(filename)s[LINE:%(lineno)d]# %(levelname)-8s [%(asctime)s]  %(message)s', level = logging.INFO, filename = u'accounts.log')
 
 def loadConfig():
     config = ConfigParser.ConfigParser()
     config.read('config.ini')
-    bic = config.get('connect', 'bic')
-    valuta = config.get('connect', 'valuta')
-    first_group = config.get('connect', 'first_group')
+    try:
+        bic = config.getint('connect', 'bic')
+    except ValueError:
+        logging.error(u"Неверно указано значение бик. Значение бик должно быть числом, работа программы будет завершена, проверьте config.ini")
+        print u"Неверно указано значение бик. Значение бик должно быть числом, работа программы будет завершена, проверьте config.ini"
+        exit()
+    try:
+        valuta = config.getint('connect', 'valuta')
+    except ValueError:
+        logging.error(u"Неверно указано значение валюты. Значение валюты должно быть числом, работа программы будет завершена, проверьте config.ini")
+        print u"Неверно указано значение валюты. Значение валюты должно быть числом, работа программы будет завершена, проверьте config.ini"
+        exit()
+    try:
+        first_group = config.getint('connect', 'first_group')
+    except ValueError:
+        logging.error(u"Неверно указано значение первой группы. Значение первой группы должно быть числом, работа программы будет завершена, проверьте config.ini")
+        print u"Неверно указано значение первой группы. Значение первой группы должно быть числом, работа программы будет завершена, проверьте config.ini"
+        exit()
 
-    return {'bic':bic,'valuta':valuta, 'first_group':first_group}
+    return {'bic':str(bic),'valuta':str(valuta), 'first_group':str(first_group)}
 
 def main():
     '''Скрипт, генерирующий счёт и ключ к счёту по указанному бику
@@ -47,6 +66,7 @@ by fleytman, velichkin'''
     key= ((key%10) * 3)%10
     print u" Ключ =", key
     final_acc= account[0:8] + str(key) + account[9:20]
+    logging.INFO(final_acc)
     print final_acc
 
     pyperclip.copy(final_acc)
