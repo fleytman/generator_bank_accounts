@@ -2,15 +2,14 @@
 import pyperclip
 import ConfigParser
 
-
 def loadConfig():
     config = ConfigParser.ConfigParser()
     config.read('config.ini')
     bic = config.get('connect', 'bic')
     valuta = config.get('connect', 'valuta')
-    perviy_raz = config.get('connect', 'perviy_raz')
+    first_group = config.get('connect', 'first_group')
 
-    return {'bic':bic,'valuta':valuta, 'perviy_raz':perviy_raz}
+    return {'bic':bic,'valuta':valuta, 'first_group':first_group}
 
 def main():
     '''Скрипт, генерирующий счёт и ключ к счёту по указанному бику
@@ -19,12 +18,12 @@ by fleytman, velichkin'''
 
     bic = config['bic']
     valuta = config['valuta']
-    perviy_raz = config['perviy_raz']
+    first_group = config['first_group']
 
     RkeyC = bic[6:9]
     RkeyC_key="713"
 
-    account = perviy_raz + valuta + "0"
+    account = first_group + valuta + "0"
     rand_acc = str(randrange(0,100000000000))
 
     if len(rand_acc) <= 11:
@@ -34,7 +33,6 @@ by fleytman, velichkin'''
     account_key = "71371371371371371371"
     multiplication=[]
 
-    #
     i=0
     while i <3:
         multiplication.append(int(RkeyC[i])*int(RkeyC_key[i]))
