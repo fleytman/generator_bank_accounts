@@ -6,11 +6,8 @@ from datetime import datetime
 # Импортируем класс интерфейса из созданного конвертером модуля
 #from untitled import Ui_Dialog
 from UiMainWindow import Ui_MainWindow
-from PyQt5.QtGui import QIntValidator, QRegExpValidator
+from PyQt5.QtGui import QRegExpValidator
 from PyQt5.QtCore import QRegExp
-import PyQt5.QtGui
-
-
 
 import os
 from random import randrange
@@ -20,6 +17,7 @@ import logging
 
 logging_error = logging.getLogger('Error log')
 logging_accounts = logging.getLogger('Accounts log')
+
 
 # setup_logger by jpmc26: http://stackoverflow.com/a/17037016
 def setup_logger(logger_name, log_file, level=logging.INFO, formatter_m='%(asctime)s : %(message)s'):
@@ -37,7 +35,7 @@ def setup_logger(logger_name, log_file, level=logging.INFO, formatter_m='%(ascti
 setup_logger('Error log', r'error.log', logging.ERROR)
 setup_logger('Accounts log', r'accounts.log', logging.INFO, '%(message)s')
 
-#
+# Проверка ключа по номеру счёта
 def check_key(account, RkeyC):
     RkeyC_key = "713"
 
@@ -105,7 +103,6 @@ class MainWindowSlots(Ui_MainWindow):
         print(type(account))
 
     def save_Config(self):
-
         configfile = open('config.ini', 'w')
         config = configparser.ConfigParser()
         config.add_section('tab1')
@@ -119,7 +116,6 @@ class MainWindowSlots(Ui_MainWindow):
 
         config.write(configfile)
         configfile.close()
-
 
     def loadConfig(self):
         config = configparser.ConfigParser()
@@ -162,9 +158,6 @@ class MainWindowSlots(Ui_MainWindow):
             logging_error.error(
                 u"В config.ini неверно указано значение счёта. Значение счёта должно быть числом, работа программы будет завершена, проверьте config.ini")
             account = ""
-
-
-
         return {'bic1': str(bic1), 'valuta': str(valuta), 'first_group': str(first_group), 'bic2': str(bic2), 'account': str(account)}
 
     def generate_key(self):
@@ -199,7 +192,6 @@ class MainWindowSlots(Ui_MainWindow):
         self.lineEdit_8.setText(final_acc)
 
     def generate_account(self):
-
         '''Скрипт, генерирующий счёт и ключ к счёту по указанному бику
     by fleytman, velichkin'''
 
