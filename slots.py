@@ -180,7 +180,7 @@ class MainWindowSlots(Ui_MainWindow):
             # Значение трехзначного условного номера РКЦ
             RkeyC = "0" + bic[4:6]
 
-        key = check_key(bic, account, RkeyC)
+        key = check_key(account, RkeyC)
 
         final_acc = account[0:8] + str(key) + account[9:20]
         logging_accounts.info(u"Сключёванный счёт:\n%s" % final_acc)
