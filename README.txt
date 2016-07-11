@@ -2,7 +2,7 @@
 Программа для генерации банквоский счетов и генерации ключа проверки.
 
 [Установка на Windows]
-1) python 3.5 и ззаписать в переменные среды
+1) python 3.5 и записать в переменные среды
 2) Запустить в консоли pip3 install -r requirements.txt
 3) Установить pyqt5 https://www.riverbankcomputing.com/software/pyqt/download5
 
