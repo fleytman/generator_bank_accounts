@@ -164,7 +164,7 @@ class MainWindowSlots(Ui_MainWindow):
 
         self.save_Config()
         bic = self.lineEdit_5.text()
-        account = self.lineEdit_7.text()
+        account = self.lineEdit_7.text()[0:8] + "0" + self.lineEdit_7.text()[9:20]
 
         if len(bic) < 9:
             self.statusBar.showMessage("В поле \"БИК\" меньше 9 символов")
