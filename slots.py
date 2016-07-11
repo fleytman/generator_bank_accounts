@@ -145,7 +145,6 @@ class MainWindowSlots(Ui_MainWindow):
             logging_error.error(
                 "В config.ini неверно указано значение первой группы. Значение первой группы должно быть числом, работа программы будет завершена, проверьте config.ini")
             first_group = ""
-
         try:
             corr_enabled = config.getint('tab1', 'corr_enabled')
         except ValueError:
@@ -170,9 +169,6 @@ class MainWindowSlots(Ui_MainWindow):
             logging_error.error(
                 u"В config.ini неверно указано значение счёта. Значение счёта должно быть числом, работа программы будет завершена, проверьте config.ini")
             account = ""
-        if self.checkBox_2.checkState() == "2":
-            self.checkBox.setEnabled()
-
         try:
             corr_enabled2 = config.getint('tab2', 'corr_enabled')
         except ValueError:
