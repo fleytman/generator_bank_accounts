@@ -109,10 +109,13 @@ class MainWindowSlots(Ui_MainWindow):
         config.set('tab1', 'bic', self.lineEdit_3.text())
         config.set('tab1', 'valuta', self.lineEdit_2.text())
         config.set('tab1', 'first_group', self.lineEdit.text())
+        config.set('tab1', 'corr_enabled', str(self.checkBox.checkState()))
+        print(str(self.checkBox.checkState()))
 
         config.add_section('tab2')
         config.set('tab2', 'bic', self.lineEdit_5.text())
         config.set('tab2', 'account', self.lineEdit_7.text())
+        config.set('tab2', 'corr_enabled', str(self.checkBox_2.checkState()))
 
         config.write(configfile)
         configfile.close()
@@ -122,26 +125,35 @@ class MainWindowSlots(Ui_MainWindow):
         config.read('config.ini')
         # tab1
         try:
-            config.getint('tab1', 'bic')
+            #config.getint('tab1', 'bic')
             bic1 = config.get('tab1', 'bic')
         except ValueError:
             logging_error.error(
-                u"В config.ini неверно указано значение бик. Значение бик должно быть числом, работа программы будет завершена, проверьте config.ini")
+                "В config.ini неверно указано значение бик. Значение бик должно быть числом, работа программы будет завершена, проверьте config.ini")
             bic1 = ""
         try:
-            config.getint('tab1', 'valuta')
+            #config.getint('tab1', 'valuta')
             valuta = config.get('tab1', 'valuta')
         except ValueError:
             logging_error.error(
-                u"В config.ini неверно указано значение валюты. Значение валюты должно быть числом, работа программы будет завершена, проверьте config.ini")
+                "В config.ini неверно указано значение валюты. Значение валюты должно быть числом, работа программы будет завершена, проверьте config.ini")
             valuta = ""
         try:
-            config.getint('tab1', 'first_group')
+            #config.getint('tab1', 'first_group')
             first_group = config.get('tab1', 'first_group')
         except ValueError:
             logging_error.error(
-                u"В config.ini неверно указано значение первой группы. Значение первой группы должно быть числом, работа программы будет завершена, проверьте config.ini")
+                "В config.ini неверно указано значение первой группы. Значение первой группы должно быть числом, работа программы будет завершена, проверьте config.ini")
             first_group = ""
+
+        try:
+            corr_enabled = config.getint('tab1', 'corr_enabled')
+        except ValueError:
+            logging_error.error("В config.ini неверно указано значение corr_enabled. Значение corr_enabled должно быть числом, работа программы будет завершена, проверьте config.ini")
+            corr_enabled = 0
+
+        if corr_enabled == 2:
+            self.checkBox.setChecked(1)
 
         # tab2
         try:
@@ -158,6 +170,18 @@ class MainWindowSlots(Ui_MainWindow):
             logging_error.error(
                 u"В config.ini неверно указано значение счёта. Значение счёта должно быть числом, работа программы будет завершена, проверьте config.ini")
             account = ""
+        if self.checkBox_2.checkState() == "2":
+            self.checkBox.setEnabled()
+
+        try:
+            corr_enabled2 = config.getint('tab2', 'corr_enabled')
+        except ValueError:
+            logging_error.error("В config.ini неверно указано значение corr_enabled. Значение corr_enabled должно быть числом, работа программы будет завершена, проверьте config.ini")
+            corr_enabled2 = 0
+
+        if corr_enabled2 == 2:
+            self.checkBox_2.setChecked(1)
+
         return {'bic1': str(bic1), 'valuta': str(valuta), 'first_group': str(first_group), 'bic2': str(bic2), 'account': str(account)}
 
     def generate_key(self):
