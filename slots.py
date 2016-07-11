@@ -97,7 +97,7 @@ class MainWindowSlots(Ui_MainWindow):
         self.lineEdit_5.setText(bic2)
         logging_accounts.info(u"Бик банка: %s" % bic2)
         print(type(bic2))
-        account = config['bic2']
+        account = config['account']
         self.lineEdit_7.setText(account)
         logging_accounts.info(u"Бик банка: %s" % account)
         print(type(account))
