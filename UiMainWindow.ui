@@ -36,7 +36,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -119,6 +119,9 @@
          </item>
          <item row="8" column="0" colspan="3">
           <widget class="QLabel" name="label_7">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
            <property name="text">
             <string>Сгенерированный счёт</string>
            </property>
@@ -368,7 +371,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>8</pointsize>
+             <pointsize>10</pointsize>
              <weight>75</weight>
              <italic>false</italic>
              <bold>true</bold>
@@ -390,7 +393,7 @@
   <widget class="QStatusBar" name="statusBar"/>
   <widget class="QMenuBar" name="menubar">
    <property name="enabled">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="geometry">
     <rect>
@@ -408,13 +411,13 @@
    </property>
    <widget class="QMenu" name="menu">
     <property name="enabled">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="tearOffEnabled">
      <bool>false</bool>
     </property>
     <property name="title">
-     <string>Очистить</string>
+     <string>Меню</string>
     </property>
     <property name="toolTipsVisible">
      <bool>false</bool>

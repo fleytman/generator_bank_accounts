@@ -208,7 +208,7 @@ class MainWindowSlots(Ui_MainWindow):
         logging_accounts.info("-------------------------------------")
         # pyperclip.copy(final_acc)
 
-        self.label_12.setText(str(key))
+        self.label_12.setText("  " + str(key))
         self.lineEdit_8.setText(final_acc)
 
     def generate_account(self):
