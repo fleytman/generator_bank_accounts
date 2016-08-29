@@ -25,6 +25,16 @@ class MainWindow(MainWindowSlots):
         self.start_program()
         self.pushButton.clicked.connect(self.generate_account)
         self.pushButton_2.clicked.connect(self.generate_key)
+
+        self.checkBox.stateChanged.connect(self.reset1)
+        self.lineEdit_3.textChanged.connect(self.reset1)
+        self.lineEdit_2.textChanged.connect(self.reset1)
+        self.lineEdit.textChanged.connect(self.reset1)
+
+        self.checkBox_2.stateChanged.connect(self.reset2)
+        self.lineEdit_5.textChanged.connect(self.reset2)
+        self.lineEdit_7.textChanged.connect(self.reset2)
+
         return None
 
 if __name__ == '__main__':

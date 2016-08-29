@@ -209,6 +209,8 @@ class MainWindowSlots(Ui_MainWindow):
         # pyperclip.copy(final_acc)
 
         self.label_12.setText("  " + str(key))
+
+        self.lineEdit_8.setEnabled(True)
         self.lineEdit_8.setText(final_acc)
 
     def generate_account(self):
@@ -257,6 +259,19 @@ class MainWindowSlots(Ui_MainWindow):
 
         pyperclip.copy(final_acc)
 
+        self.lineEdit_4.setEnabled(True)
         self.lineEdit_4.setText(final_acc)
         return None
+
+    #Сбросить результат на странице генерации ключа
+    def reset1(self):
+        self.lineEdit_4.setEnabled(False)
+        self.lineEdit_4.setText("")
+
+    #Сбросить результат на странице ключевания ключа
+    def reset2(self):
+        self.lineEdit_8.setEnabled(False)
+        self.lineEdit_8.setText("")
+        self.label_12.setText("")
+
 

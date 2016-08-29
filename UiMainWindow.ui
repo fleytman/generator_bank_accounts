@@ -36,7 +36,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -133,7 +133,7 @@
          <item row="9" column="0" colspan="3">
           <widget class="QLineEdit" name="lineEdit_4">
            <property name="enabled">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
            <property name="font">
             <font>
@@ -243,7 +243,7 @@
          <item row="7" column="0" colspan="2">
           <widget class="QLineEdit" name="lineEdit_8">
            <property name="enabled">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
            <property name="font">
             <font>

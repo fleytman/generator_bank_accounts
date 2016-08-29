@@ -62,7 +62,7 @@ class Ui_MainWindow(object):
         self.label_7.setObjectName("label_7")
         self.gridLayout.addWidget(self.label_7, 8, 0, 1, 3)
         self.lineEdit_4 = QtWidgets.QLineEdit(self.layoutWidget)
-        self.lineEdit_4.setEnabled(True)
+        self.lineEdit_4.setEnabled(False)
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
@@ -107,7 +107,7 @@ class Ui_MainWindow(object):
         self.label_14.setObjectName("label_14")
         self.gridLayout_3.addWidget(self.label_14, 6, 0, 1, 2)
         self.lineEdit_8 = QtWidgets.QLineEdit(self.layoutWidget1)
-        self.lineEdit_8.setEnabled(True)
+        self.lineEdit_8.setEnabled(False)
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
@@ -197,7 +197,7 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menu.menuAction())
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
