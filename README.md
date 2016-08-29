@@ -4,14 +4,12 @@
 ![ScreenShot](http://savepic.org/8372535.png)
 
 ## Установка на Windows
-1. python 3.5 и записать в переменные среды
+1. [python 3.5](https://www.python.org/downloads/) и записать в переменные среды
 2. Запустить в консоли pip3 install -r requirements.txt
-3. Установить pyqt5 https://www.riverbankcomputing.com/software/pyqt/download5
 
 ##Установка на *nix
-1. Установите python 3.5
+1. Установить [python 3.5](https://www.python.org/downloads/)
 2. pip3 install -r requirements.txt
-3. Установить pyqt5 https://www.riverbankcomputing.com/software/pyqt/download5
 
 ##Сборка под Windows
 Сборка под Windows делается с помощью pyinstaller из develop ветки http://pythonhosted.org/PyInstaller/installation.html#installing-from-the-archive
