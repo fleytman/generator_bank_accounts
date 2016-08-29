@@ -4,7 +4,7 @@
 ![ScreenShot](http://savepic.org/8372535.png)
 
 ## Установка на Windows
-1. [python 3.5](https://www.python.org/downloads/) и записать в переменные среды
+1. Установить [python 3.5](https://www.python.org/downloads/) и записать в переменные среды
 2. Запустить в консоли pip3 install -r requirements.txt
 
 ##Установка на *nix
