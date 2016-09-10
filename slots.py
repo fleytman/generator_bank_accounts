@@ -96,11 +96,9 @@ class MainWindowSlots(Ui_MainWindow):
         bic2 = config['bic2']
         self.lineEdit_5.setText(bic2)
         logging_accounts.info(u"Бик банка: %s" % bic2)
-        print(type(bic2))
         account = config['account']
         self.lineEdit_7.setText(account)
-        logging_accounts.info(u"Бик банка: %s" % account)
-        print(type(account))
+        logging_accounts.info(u"Счёт для ключевания: %s" % account)
 
     def save_Config(self):
         configfile = open('config.ini', 'w')
@@ -110,7 +108,6 @@ class MainWindowSlots(Ui_MainWindow):
         config.set('tab1', 'valuta', self.lineEdit_2.text())
         config.set('tab1', 'first_group', self.lineEdit.text())
         config.set('tab1', 'corr_enabled', str(self.checkBox.checkState()))
-        print(str(self.checkBox.checkState()))
 
         config.add_section('tab2')
         config.set('tab2', 'bic', self.lineEdit_5.text())
@@ -125,21 +122,18 @@ class MainWindowSlots(Ui_MainWindow):
         config.read('config.ini')
         # tab1
         try:
-            #config.getint('tab1', 'bic')
             bic1 = config.get('tab1', 'bic')
         except ValueError:
             logging_error.error(
                 "В config.ini неверно указано значение бик. Значение бик должно быть числом, работа программы будет завершена, проверьте config.ini")
             bic1 = ""
         try:
-            #config.getint('tab1', 'valuta')
             valuta = config.get('tab1', 'valuta')
         except ValueError:
             logging_error.error(
                 "В config.ini неверно указано значение валюты. Значение валюты должно быть числом, работа программы будет завершена, проверьте config.ini")
             valuta = ""
         try:
-            #config.getint('tab1', 'first_group')
             first_group = config.get('tab1', 'first_group')
         except ValueError:
             logging_error.error(
@@ -181,7 +175,6 @@ class MainWindowSlots(Ui_MainWindow):
         return {'bic1': str(bic1), 'valuta': str(valuta), 'first_group': str(first_group), 'bic2': str(bic2), 'account': str(account)}
 
     def generate_key(self):
-
         self.save_Config()
         bic = self.lineEdit_5.text()
         account = self.lineEdit_7.text()[0:8] + "0" + self.lineEdit_7.text()[9:20]
@@ -219,7 +212,6 @@ class MainWindowSlots(Ui_MainWindow):
 
         self.save_Config()
         bic = self.lineEdit_3.text()
-        print(bic)
         valuta = self.lineEdit_2.text()
         first_group = self.lineEdit.text()
 
@@ -236,11 +228,9 @@ class MainWindowSlots(Ui_MainWindow):
         if self.checkBox.isChecked():
             # Значение условного номера кредитной организации
             RkeyC = bic[6:9]
-            print(RkeyC)
         else:
             # Значение трехзначного условного номера РКЦ
             RkeyC = "0" + bic[4:6]
-            print(RkeyC)
 
         account = first_group + valuta + "0"
         rand_acc = str(randrange(0, 100000000000))
@@ -273,5 +263,3 @@ class MainWindowSlots(Ui_MainWindow):
         self.lineEdit_8.setEnabled(False)
         self.lineEdit_8.setText("")
         self.label_12.setText("")
-
-
