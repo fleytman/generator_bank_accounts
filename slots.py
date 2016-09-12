@@ -200,7 +200,11 @@ class MainWindowSlots(Ui_MainWindow):
         logging_accounts.info("-------------------------------------")
         # pyperclip.copy(final_acc)
 
-        self.label_12.setText("  " + str(key))
+        # Реализовать нормальный способ показывать ключ над 10 разрядом сключеванного счета
+        if sys.platform == "win32":
+            self.label_12.setText("  " + str(key))
+        elif sys.platform == "darwin":
+            self.label_12.setText(str(key))
 
         self.lineEdit_8.setEnabled(True)
         self.lineEdit_8.setText(final_acc)
