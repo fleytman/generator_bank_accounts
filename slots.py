@@ -1,23 +1,22 @@
-"""
-Пользовательские слоты для виджетов.
-"""
-# Импортируем модуль времени
-from datetime import datetime
-# Импортируем класс интерфейса из созданного конвертером модуля
-#from untitled import Ui_Dialog
-from UiMainWindow import Ui_MainWindow
-from PyQt5.QtGui import QRegExpValidator
-from PyQt5.QtCore import QRegExp
-
-import os
+import os, sys
 from random import randrange
 import pyperclip
 import configparser
 import logging
 
+if sys.platform == "win32":
+    from UiMainWindow import Ui_MainWindow
+elif sys.platform == "darwin":
+    from UiMainWindow_OSX import Ui_MainWindow
+elif sys.platform == "linux":
+    # На данный момент не реализованно
+    from UiMainWindow_Linux import Ui_MainWindow
+
+from PyQt5.QtGui import QRegExpValidator
+from PyQt5.QtCore import QRegExp
+
 logging_error = logging.getLogger('Error log')
 logging_accounts = logging.getLogger('Accounts log')
-
 
 # setup_logger by jpmc26: http://stackoverflow.com/a/17037016
 def setup_logger(logger_name, log_file, level=logging.INFO, formatter_m='%(asctime)s : %(message)s'):
