@@ -9,20 +9,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>241</width>
-    <height>284</height>
+    <width>246</width>
+    <height>325</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>241</width>
-    <height>284</height>
+    <width>246</width>
+    <height>325</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>250</width>
-    <height>284</height>
+    <width>246</width>
+    <height>350</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -74,7 +74,7 @@
            </property>
            <property name="maximumSize">
             <size>
-             <width>44</width>
+             <width>50</width>
              <height>16777215</height>
             </size>
            </property>
@@ -147,13 +147,13 @@
           <widget class="QLineEdit" name="lineEdit_3">
            <property name="minimumSize">
             <size>
-             <width>77</width>
+             <width>80</width>
              <height>0</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>66</width>
+             <width>80</width>
              <height>16777215</height>
             </size>
            </property>
@@ -178,9 +178,12 @@
           <widget class="QLineEdit" name="lineEdit_2">
            <property name="maximumSize">
             <size>
-             <width>33</width>
+             <width>37</width>
              <height>16777215</height>
             </size>
+           </property>
+           <property name="text">
+            <string/>
            </property>
            <property name="maxLength">
             <number>3</number>
@@ -238,7 +241,7 @@
           <x>0</x>
           <y>4</y>
           <width>211</width>
-          <height>241</height>
+          <height>221</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout_3" columnstretch="0,0">
@@ -359,9 +362,15 @@
          </item>
          <item row="1" column="0">
           <widget class="QLineEdit" name="lineEdit_5">
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>0</height>
+            </size>
+           </property>
            <property name="maximumSize">
             <size>
-             <width>77</width>
+             <width>80</width>
              <height>16777215</height>
             </size>
            </property>
@@ -386,7 +395,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>10</pointsize>
+             <pointsize>13</pointsize>
              <weight>75</weight>
              <italic>false</italic>
              <bold>true</bold>
@@ -414,7 +423,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>241</width>
+     <width>246</width>
      <height>22</height>
     </rect>
    </property>
@@ -424,21 +433,6 @@
    <property name="nativeMenuBar">
     <bool>false</bool>
    </property>
-   <widget class="QMenu" name="menu">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="tearOffEnabled">
-     <bool>false</bool>
-    </property>
-    <property name="title">
-     <string>Меню</string>
-    </property>
-    <property name="toolTipsVisible">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <addaction name="menu"/>
   </widget>
   <action name="action545">
    <property name="text">
