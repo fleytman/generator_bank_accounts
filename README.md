@@ -4,7 +4,7 @@
 ![ScreenShot](http://savepic.org/8372535.png)
 
 ## Установка для запуска из исходников
-1. Установить [python 3.5](https://www.python.org/downloads/) записать в переменные среды(если ОС Windows)
+1. Установить [python 3.5](https://www.python.org/downloads/) (записать в переменные среды, если ОС Windows)
 2. Запустить в консоли
 ```bash
 pip3 install -r requirements.txt
