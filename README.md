@@ -5,7 +5,10 @@
 
 ## Установка для запуска из исходников
 1. Установить [python 3.5](https://www.python.org/downloads/) записать в переменные среды(если ОС Windows)
-2. Запустить в консоли pip3 install -r requirements.txt
+2. Запустить в консоли
+```bash
+pip3 install -r requirements.txt
+```
 
 ##Запуск
 В файловом менеджере:
@@ -30,6 +33,5 @@ pyinstaller --onefile --noconsole main.py --name acc_gen
 На данный момент у сборки таким образом есть надостаток:
 
 https://github.com/fleytman/generator_bank_accounts/issues/2
-
 
 Запускалось под Windows 8 и Windows 10, Linux Mint, OS X Captain
