@@ -18,13 +18,15 @@ python3 main.py
 pip3 install https://github.com/pyinstaller/pyinstaller/zipball/develop
 
 Сборка acc_gen
+```bash
 pyinstaller --onefile --noconsole main.py --name acc_gen
+```
 
 В директории dist будет лежать бинарник acc_gen
 
 На данный момент у сборки таким образом есть надостаток:
-```bash
+
 https://github.com/fleytman/generator_bank_accounts/issues/2
-```
+
 
 Запускалось под Windows 8 и Windows 10, Linux Mint, OS X Captain
