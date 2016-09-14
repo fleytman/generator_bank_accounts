@@ -15,8 +15,9 @@ python3 main.py
 
 ##Сборка под свою ОС
 Сборка под свою ОС делается с помощью pyinstaller из develop ветки:
+```bash
 pip3 install https://github.com/pyinstaller/pyinstaller/zipball/develop
-
+```
 Сборка acc_gen
 ```bash
 pyinstaller --onefile --noconsole main.py --name acc_gen
