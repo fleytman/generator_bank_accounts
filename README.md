@@ -29,8 +29,9 @@ pyinstaller --onefile --noconsole main.py --name acc_gen
 
 В директории dist будет лежать бинарник acc_gen
 
-На данный момент у сборки таким образом есть надостаток:
+##Известные проблемы
+1. Сборка собранная на Windows 10 не работает в Windows 7: https://github.com/fleytman/generator_bank_accounts/issues/2
+2. На Linux может потребоваться дополнительные пакеты: https://github.com/fleytman/generator_bank_accounts/issues/11
 
-https://github.com/fleytman/generator_bank_accounts/issues/2
 
 Запускалось под Windows 8 и Windows 10, Linux Mint, OS X Captain
