@@ -19,6 +19,8 @@ class MainWindow(MainWindowSlots):
         self.setupUi(dialog)
         # Подключить созданные нами слоты к виджетам
         self.connect_slots()
+        # Иницировать буфер обмена
+        self.clip = QtWidgets.QApplication.clipboard()
 
     # Подключаем слоты к виджетам
     def connect_slots(self):

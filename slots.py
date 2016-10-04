@@ -1,6 +1,5 @@
 import os, sys
 from random import randrange
-import pyperclip
 import configparser
 import logging
 
@@ -209,9 +208,11 @@ class MainWindowSlots(Ui_MainWindow):
         self.lineEdit_8.setEnabled(True)
         self.lineEdit_8.setText(final_acc)
 
+        self.clip.setText(final_acc)
+
     def generate_account(self):
-        '''Скрипт, генерирующий счёт и ключ к счёту по указанному бику
-    by fleytman, velichkin'''
+        """Скрипт, генерирующий счёт и ключ к счёту по указанному бику
+    by fleytman, velichkin"""
 
         self.save_Config()
         bic = self.lineEdit_3.text()
@@ -250,7 +251,7 @@ class MainWindowSlots(Ui_MainWindow):
 
         logging_accounts.info("-------------------------------------")
 
-        pyperclip.copy(final_acc)
+        self.clip.setText(final_acc)
 
         self.lineEdit_4.setEnabled(True)
         self.lineEdit_4.setText(final_acc)
