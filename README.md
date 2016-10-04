@@ -31,7 +31,5 @@ pyinstaller --onefile --noconsole main.py --name acc_gen
 
 ##Известные проблемы
 1. Сборка собранная на Windows 10 не работает в Windows 7: https://github.com/fleytman/generator_bank_accounts/issues/2
-2. На Linux может потребоваться дополнительные пакеты: https://github.com/fleytman/generator_bank_accounts/issues/11
-
 
 Запускалось под Windows 8 и Windows 10, Linux Mint, OS X Captain
