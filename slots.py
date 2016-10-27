@@ -178,7 +178,7 @@ class MainWindowSlots(Ui_MainWindow):
         account = self.lineEdit_7.text()[0:8] + "0" + self.lineEdit_7.text()[9:20]
 
         if len(bic) < 9:
-            self.statusBar.showMessage("В поле \"БИК\" меньше 9 символов")
+            self.statusBar.showMessage("В поле \"BIC\" меньше 9 символов")
             return None
         if len(account) < 20:
             self.statusBar.showMessage("Счёт для ключевания < 20 символов")
@@ -220,7 +220,7 @@ class MainWindowSlots(Ui_MainWindow):
         first_group = self.lineEdit.text()
 
         if len(bic) < 9:
-            self.statusBar.showMessage("В поле \"БИК\" меньше 9 символов")
+            self.statusBar.showMessage("В поле \"BIC\" меньше 9 символов")
             return None
         if len(valuta) < 3:
             self.statusBar.showMessage("В поле \"Валюта\" меньше 3 символов")
