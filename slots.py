@@ -261,9 +261,11 @@ class MainWindowSlots(Ui_MainWindow):
     def reset1(self):
         self.lineEdit_4.setEnabled(False)
         self.lineEdit_4.setText("")
+        self.statusBar.showMessage("")
 
     #Сбросить результат на странице ключевания ключа
     def reset2(self):
         self.lineEdit_8.setEnabled(False)
         self.lineEdit_8.setText("")
         self.label_12.setText("")
+        self.statusBar.showMessage("")
