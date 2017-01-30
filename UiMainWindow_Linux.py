@@ -14,7 +14,7 @@ class Ui_MainWindow(object):
         MainWindow.setEnabled(True)
         MainWindow.resize(290, 335)
         MainWindow.setMinimumSize(QtCore.QSize(290, 335))
-        MainWindow.setMaximumSize(QtCore.QSize(290, 335))
+        MainWindow.setMaximumSize(QtCore.QSize(500, 16777215))
         MainWindow.setInputMethodHints(QtCore.Qt.ImhDate|QtCore.Qt.ImhPreferUppercase)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")

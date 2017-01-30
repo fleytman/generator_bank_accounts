@@ -209,8 +209,9 @@ class MainWindowSlots(Ui_MainWindow):
         self.lineEdit_8.setText(final_acc)
 
         self.clip.setText(final_acc)
+        # Скопировать в primary clipboard, если ОС linux
         if sys.platform == "linux":
-            self.clip_x11.setText(final_acc)
+            self.clip.setText(final_acc, 1)
 
     def generate_account(self):
         """Скрипт, генерирующий счёт и ключ к счёту по указанному бику
@@ -254,8 +255,9 @@ class MainWindowSlots(Ui_MainWindow):
         logging_accounts.info("-------------------------------------")
 
         self.clip.setText(final_acc)
+        #Скопировать в primary clipboard, если ОС linux
         if sys.platform == "linux":
-            self.clip_x11.setText(final_acc)
+            self.clip.setText(final_acc, 1)
 
         self.lineEdit_4.setEnabled(True)
         self.lineEdit_4.setText(final_acc)

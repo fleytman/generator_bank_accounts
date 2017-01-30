@@ -21,7 +21,6 @@ class MainWindow(MainWindowSlots):
         self.connect_slots()
         # Иницировать буфер обмена
         self.clip = QtWidgets.QApplication.clipboard()
-        self.clip_x11 = QtWidgets.QApplication.clipboard().Selection
 
     # Подключаем слоты к виджетам
     def connect_slots(self):
