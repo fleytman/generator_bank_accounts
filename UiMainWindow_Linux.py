@@ -201,7 +201,7 @@ class Ui_MainWindow(object):
         self.action54.setObjectName("action54")
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.lineEdit_3, self.lineEdit_2)
         MainWindow.setTabOrder(self.lineEdit_2, self.lineEdit)
