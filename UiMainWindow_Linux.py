@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'UiMainWindow_Linux.ui'
 #
-# Created by: PyQt5 UI code generator 5.5.1
+# Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -29,7 +29,7 @@ class Ui_MainWindow(object):
         self.layoutWidget.setObjectName("layoutWidget")
         self.gridLayout = QtWidgets.QGridLayout(self.layoutWidget)
         self.gridLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
-        self.gridLayout.setContentsMargins(4, -1, -1, -1)
+        self.gridLayout.setContentsMargins(4, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
         self.lineEdit = QtWidgets.QLineEdit(self.layoutWidget)
         self.lineEdit.setEnabled(True)
@@ -105,7 +105,7 @@ class Ui_MainWindow(object):
         self.layoutWidget1.setObjectName("layoutWidget1")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.layoutWidget1)
         self.gridLayout_3.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
-        self.gridLayout_3.setContentsMargins(4, -1, -1, -1)
+        self.gridLayout_3.setContentsMargins(4, 0, 0, 0)
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.label_14 = QtWidgets.QLabel(self.layoutWidget1)
         self.label_14.setObjectName("label_14")
@@ -185,7 +185,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusBar)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setEnabled(False)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 290, 27))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 290, 21))
         self.menubar.setDefaultUp(False)
         self.menubar.setNativeMenuBar(False)
         self.menubar.setObjectName("menubar")
@@ -196,7 +196,7 @@ class Ui_MainWindow(object):
         self.action54.setObjectName("action54")
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
