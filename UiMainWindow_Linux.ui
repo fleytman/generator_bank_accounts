@@ -9,20 +9,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>290</width>
+    <width>360</width>
     <height>335</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="minimumSize">
    <size>
-    <width>290</width>
+    <width>360</width>
     <height>335</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>500</width>
-    <height>16777215</height>
+    <width>360</width>
+    <height>335</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -36,7 +42,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -50,8 +56,8 @@
          <rect>
           <x>0</x>
           <y>3</y>
-          <width>271</width>
-          <height>201</height>
+          <width>331</width>
+          <height>181</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout">
@@ -240,8 +246,8 @@
          <rect>
           <x>0</x>
           <y>4</y>
-          <width>261</width>
-          <height>238</height>
+          <width>321</width>
+          <height>231</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout_3" columnstretch="0,0">
@@ -251,42 +257,10 @@
          <property name="leftMargin">
           <number>4</number>
          </property>
-         <item row="6" column="0" colspan="2">
-          <widget class="QLabel" name="label_14">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_10">
            <property name="text">
-            <string>Сключёванный счёт</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0" colspan="2">
-          <widget class="QLineEdit" name="lineEdit_8">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>13</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="acceptDrops">
-            <bool>true</bool>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="maxLength">
-            <number>20</number>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-           <property name="dragEnabled">
-            <bool>true</bool>
-           </property>
-           <property name="readOnly">
-            <bool>true</bool>
+            <string>BIC банка</string>
            </property>
           </widget>
          </item>
@@ -329,17 +303,10 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_10">
+         <item row="4" column="0" colspan="2">
+          <widget class="QPushButton" name="pushButton_2">
            <property name="text">
-            <string>BIC банка</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0" colspan="2">
-          <widget class="QLabel" name="label_13">
-           <property name="text">
-            <string>Счёт для ключевания</string>
+            <string>Сключевать</string>
            </property>
           </widget>
          </item>
@@ -353,10 +320,29 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="0" colspan="2">
-          <widget class="QPushButton" name="pushButton_2">
+         <item row="6" column="0" colspan="2">
+          <widget class="QLabel" name="label_14">
            <property name="text">
-            <string>Сключевать</string>
+            <string>Сключёванный счёт</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLabel" name="label_12">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>13</pointsize>
+             <weight>75</weight>
+             <italic>false</italic>
+             <bold>true</bold>
+             <underline>false</underline>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
            </property>
           </widget>
          </item>
@@ -388,22 +374,42 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="1">
-          <widget class="QLabel" name="label_12">
+         <item row="2" column="0" colspan="2">
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>Счёт для ключевания</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0" colspan="2">
+          <widget class="QLineEdit" name="lineEdit_8">
            <property name="enabled">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
            <property name="font">
             <font>
              <pointsize>13</pointsize>
              <weight>75</weight>
-             <italic>false</italic>
              <bold>true</bold>
-             <underline>false</underline>
             </font>
+           </property>
+           <property name="acceptDrops">
+            <bool>true</bool>
            </property>
            <property name="text">
             <string/>
+           </property>
+           <property name="maxLength">
+            <number>20</number>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="dragEnabled">
+            <bool>true</bool>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -423,7 +429,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>290</width>
+     <width>360</width>
      <height>21</height>
     </rect>
    </property>
@@ -445,6 +451,20 @@
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_3</tabstop>
+  <tabstop>lineEdit_2</tabstop>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>checkBox</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>lineEdit_4</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>lineEdit_5</tabstop>
+  <tabstop>checkBox_2</tabstop>
+  <tabstop>lineEdit_7</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>lineEdit_8</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

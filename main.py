@@ -10,6 +10,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 # Импортируем созданный нами класс со слотами
 from slots import MainWindowSlots
 
+import signal
+
 # Создаём ещё один класс, наследуясь от класса со слотами
 class MainWindow(MainWindowSlots):
 
@@ -21,6 +23,9 @@ class MainWindow(MainWindowSlots):
         self.connect_slots()
         # Иницировать буфер обмена
         self.clip = QtWidgets.QApplication.clipboard()
+
+        #Обработка ctrl+c в консоли
+        signal.signal(signal.SIGINT, signal.SIG_DFL)
 
     # Подключаем слоты к виджетам
     def connect_slots(self):
