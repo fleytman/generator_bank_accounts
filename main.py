@@ -1,3 +1,4 @@
+# На основе шаблона из https://github.com/zaharsk/pyqt_test
 """
 Основной скрипт программы.
 Запускает конфигуратор окна, подключает слоты и отображает окно.
@@ -5,12 +6,13 @@
 # Импортируем системый модуль для корректного закрытия программы
 import sys
 # Импортируем минимальный набор виджетов
-#from PyQt5.QtWidgets import QApplication, QWidget, QDialog
+# from PyQt5.QtWidgets import QApplication, QWidget, QDialog
 from PyQt5 import QtCore, QtGui, QtWidgets
 # Импортируем созданный нами класс со слотами
 from slots import MainWindowSlots
 
 import signal
+
 
 # Создаём ещё один класс, наследуясь от класса со слотами
 class MainWindow(MainWindowSlots):
@@ -30,6 +32,7 @@ class MainWindow(MainWindowSlots):
     # Подключаем слоты к виджетам
     def connect_slots(self):
         self.start_program()
+
         self.pushButton.clicked.connect(self.generate_account)
         self.pushButton_2.clicked.connect(self.generate_key)
 
@@ -48,7 +51,7 @@ if __name__ == '__main__':
 
     app = QtWidgets.QApplication(sys.argv)
     Window = QtWidgets.QMainWindow()
-    # Должно делать поверх всех окон, но не делает
+    # Поверх всех окон
     # Window.setWindowFlags(Window.windowFlags() | QtCore.Qt.WindowStaysOnTopHint)
     ui = MainWindow(Window)
     Window.show()

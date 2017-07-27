@@ -189,20 +189,14 @@ class Ui_MainWindow(object):
         self.menubar.setDefaultUp(False)
         self.menubar.setNativeMenuBar(False)
         self.menubar.setObjectName("menubar")
-        self.menu = QtWidgets.QMenu(self.menubar)
-        self.menu.setEnabled(False)
-        self.menu.setTearOffEnabled(False)
-        self.menu.setToolTipsVisible(False)
-        self.menu.setObjectName("menu")
         MainWindow.setMenuBar(self.menubar)
         self.action545 = QtWidgets.QAction(MainWindow)
         self.action545.setObjectName("action545")
         self.action54 = QtWidgets.QAction(MainWindow)
         self.action54.setObjectName("action54")
-        self.menubar.addAction(self.menu.menuAction())
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -224,7 +218,6 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(_translate("MainWindow", "Сключевать"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Ключевание"))
         self.tabWidget.setTabToolTip(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Ключевание банковского счёта"))
-        self.menu.setTitle(_translate("MainWindow", "Меню"))
         self.action545.setText(_translate("MainWindow", "545"))
         self.action54.setText(_translate("MainWindow", "54"))
 

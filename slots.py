@@ -8,7 +8,6 @@ if sys.platform == "win32":
 elif sys.platform == "darwin":
     from UiMainWindow_OSX import Ui_MainWindow
 elif sys.platform == "linux":
-    # На данный момент не реализованно
     from UiMainWindow_Linux import Ui_MainWindow
 
 from PyQt5.QtGui import QRegExpValidator
