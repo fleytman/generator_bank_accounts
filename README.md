@@ -1,7 +1,7 @@
 # Генератор банковских счетов QT-version 0.8
 Программа для генерации банквоских счетов и генерации ключа проверки.
 
-![ScreenShot](http://savepic.org/8372535.png)
+![ScreenShot](https://fleytman.ru/wp-content/uploads/2016/09/687474703a2f2f736176657069632e6f72672f383337323533352e706e67.png)
 
 ## Установка для запуска из исходников
 1. Установить [python 3.5](https://www.python.org/downloads/) (записать в переменные среды, если ОС Windows)
